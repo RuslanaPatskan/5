@@ -1,0 +1,22 @@
+def calculate_product(arr):
+    product = 1
+    for i in range(len(arr)):
+        if i % 2 != 0:  
+            product *= arr[i]
+    return product
+
+def main():
+    
+    N = int(input("Введіть довжину масиву: "))
+
+    user_array = []
+
+    for i in range(N):
+        num = int(input(f"Введіть {i + 1}-й елемент масиву: "))
+        user_array.append(num)
+
+    result = calculate_product(user_array)
+    print("Добуток всіх елементів масиву з непарними індексами:", result)
+
+if __name__ == "__main__":
+    main()
